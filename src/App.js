@@ -2,6 +2,9 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { SafeAreaView, StyleSheet, View, Text, StatusBar } from 'react-native';
 import { NavigationContainer} from '@react-navigation/native';
+import { Provider } from 'react-redux';
+
+import store from './store/store';
 
 const styles = StyleSheet.create({
 	body: {
@@ -34,15 +37,17 @@ const styles = StyleSheet.create({
 function App() {
 	return (
 		<NavigationContainer>
-			<StatusBar barStyle="dark-content" />
-			<SafeAreaView style={styles.body}>
-				<View style={styles.section}>
-					<Text style={styles.title}>React Native</Text>
-					<Text style={styles.text}>
-						Edit <Text style={styles.strong}>App.js</Text> to change this screen and then come back to see your edits.
-					</Text>
-				</View>
-			</SafeAreaView>
+			<Provider store={store}>
+				<StatusBar barStyle="dark-content" />
+				<SafeAreaView style={styles.body}>
+					<View style={styles.section}>
+						<Text style={styles.title}>React Native</Text>
+						<Text style={styles.text}>
+							Edit <Text style={styles.strong}>App.js</Text> to change this screen and then come back to see your edits.
+						</Text>
+					</View>
+				</SafeAreaView>
+			</Provider>
 		</NavigationContainer>
 	);
 };
