@@ -1,35 +1,27 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {
-	SafeAreaView,
-	StyleSheet,
-	ScrollView,
-	View,
-	Text,
-	StatusBar,
-} from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { SafeAreaView, StyleSheet, View, Text, StatusBar } from 'react-native';
 import { NavigationContainer} from '@react-navigation/native';
 
 const styles = StyleSheet.create({
-	scrollView: {
-		backgroundColor: Colors.lighter,
-	},
 	body: {
-		backgroundColor: Colors.white,
+		flex: 1,
+		backgroundColor: '#fff',
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
 	section: {
 		marginVertical: 20,
 		paddingHorizontal: 20,
 	},
 	title: {
-		color: Colors.black,
+		color: '#000',
 		fontSize: 24,
 		fontWeight: '600',
 		marginVertical: 5,
 	},
 	text: {
-		color: Colors.dark,
+		color: '#333',
 		fontSize: 18,
 		fontWeight: '400',
 		marginVertical: 5,
@@ -39,23 +31,17 @@ const styles = StyleSheet.create({
 	},
 });
 
-const App = () => {
+function App() {
 	return (
 		<NavigationContainer>
 			<StatusBar barStyle="dark-content" />
-			<SafeAreaView>
-				<ScrollView
-					contentInsetAdjustmentBehavior="automatic"
-					style={styles.scrollView}>
-					<View style={styles.body}>
-						<View style={styles.section}>
-							<Text style={styles.title}>React Native</Text>
-							<Text style={styles.text}>
-								Edit <Text style={styles.strong}>App.js</Text> to change this screen and then come back to see your edits.
-							</Text>
-						</View>
-					</View>
-				</ScrollView>
+			<SafeAreaView style={styles.body}>
+				<View style={styles.section}>
+					<Text style={styles.title}>React Native</Text>
+					<Text style={styles.text}>
+						Edit <Text style={styles.strong}>App.js</Text> to change this screen and then come back to see your edits.
+					</Text>
+				</View>
 			</SafeAreaView>
 		</NavigationContainer>
 	);
