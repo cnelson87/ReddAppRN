@@ -10,6 +10,10 @@ class UserScreen extends React.Component {
 		sidebarData: null
 	};
 
+	componentDidMount() {
+		// console.log('UserScreen:componentDidMount');
+	}
+
 	render() {
 		const { navigation } = this.props;
 		const { sidebarData } = this.state;

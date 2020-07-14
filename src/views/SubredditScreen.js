@@ -10,6 +10,10 @@ class SubredditScreen extends React.Component {
 		sidebarData: null
 	};
 
+	componentDidMount() {
+		// console.log('SubredditScreen:componentDidMount');
+	}
+
 	render() {
 		const { navigation } = this.props;
 		const { sidebarData } = this.state;

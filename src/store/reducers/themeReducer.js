@@ -1,5 +1,5 @@
-import initialState from 'store/initialState';
-import { TOGGLE_THEME } from 'store/actions/theme';
+import initialState from '../initialState';
+import { TOGGLE_THEME } from '../actions/theme';
 
 function themeReducer(isDarkTheme = initialState.isDarkTheme, action) {
 	switch(action.type) {

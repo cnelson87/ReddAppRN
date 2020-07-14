@@ -13,6 +13,10 @@ class PostDetailScreen extends React.Component {
 		error: null,
 	};
 
+	componentDidMount() {
+		// console.log('PostDetailScreen:componentDidMount');
+	}
+
 	render() {
 		const { navigation } = this.props;
 		const { data, comments, error } = this.state;

@@ -1,5 +1,5 @@
-import initialState from 'store/initialState';
-import { TOGGLE_MENU } from 'store/actions/menu';
+import initialState from '../initialState';
+import { TOGGLE_MENU } from '../actions/menu';
 
 function menuReducer(menuOpen = initialState.menuOpen, action) {
 	switch(action.type) {

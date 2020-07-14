@@ -24,9 +24,6 @@ function App() {
 						headerTitle: null,
 						headerBackTitleVisible: false,
 						// headerTransparent: true,
-						// headerStyle: {
-						//
-						// },
 					}}
 				>
 					<Stack.Screen name="Home" component={HomeScreen} />
